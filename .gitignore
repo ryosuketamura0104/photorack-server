@@ -23,3 +23,8 @@ Homestead.json
 .phpunit.result.cache
 
 .DS_Store
+
+composer.lock
+docker/db/data/ib_logfile*
+docker/db/data/ibdata*
+docker/db/data/ibtmp*
