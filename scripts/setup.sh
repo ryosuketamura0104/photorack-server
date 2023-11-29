@@ -10,9 +10,9 @@ docker compose exec app composer update --no-scripts
 
 docker compose exec app composer dump-autoload
 
-npm install
+docker compose exec app npm install && npm run dev
 
-npm run watch-poll
+docker compose exec app npm run watch-poll
 
 open http://localhost:8000
 
