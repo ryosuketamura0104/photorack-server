@@ -17,6 +17,8 @@ ENV COMPOSER_HOME /composer
 
 ENV PATH $PATH:/composer/vendor/bin
 
+COPY --from=node:12.20 /usr/local/bin /usr/local/bin
+COPY --from=node:12.20 /usr/local/lib /usr/local/lib
 
 WORKDIR /var/www
 
