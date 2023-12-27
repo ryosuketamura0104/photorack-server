@@ -19,8 +19,10 @@ ENV PATH $PATH:/composer/vendor/bin
 
 WORKDIR /var/www
 
+RUN composer global require "laravel/installer"
+
+WORKDIR /var/www/html
+
 RUN ls
 RUN pwd
-RUN sh html/script/setup.sh
-
-RUN composer global require "laravel/installer"
+RUN sh script/setup.sh
