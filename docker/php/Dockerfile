@@ -17,8 +17,14 @@ ENV COMPOSER_HOME /composer
 
 ENV PATH $PATH:/composer/vendor/bin
 
+RUN ls
+RUN pwd
 RUN sh ./script/setup.sh
 
 WORKDIR /var/www
 
 RUN composer global require "laravel/installer"
+
+RUN ls
+RUN pwd
+RUN sh ./script/setup.sh
