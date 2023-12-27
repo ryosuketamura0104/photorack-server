@@ -21,3 +21,11 @@ ENV PATH $PATH:/composer/vendor/bin
 WORKDIR /var/www
 
 RUN composer global require "laravel/installer"
+
+RUN docker compose up -d
+
+RUN docker compose exec app chown www-data storage/ -R
+
+RUN docker compose exec app composer update --no-scripts
+
+RUN docker compose exec app composer dump-autoload
