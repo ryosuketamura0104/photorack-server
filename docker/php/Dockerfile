@@ -22,4 +22,4 @@ WORKDIR /var/www
 
 RUN composer global require "laravel/installer"
 
-RUN sh script/setup.sh
+RUN sh ./script/setup.sh
